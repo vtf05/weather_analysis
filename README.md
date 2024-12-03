@@ -84,6 +84,62 @@ python manage.py calculate_annual_stats
 - Index the WeatherRecord table by station and date for efficient querying.
 - Use bulk operations for calculations and insertions.
 
+## Problem 4: REST API
+
+### Framework: Django REST Framework (DRF)
+
+#### Setup
+
+To run the application, clone the repository using:
+
+```bash
+git clone https://github.com/vtf05/weather_analysis.git
+```
+
+Initialize the virtual environment using:
+
+```bash
+pipenv shell
+```
+
+Install all the required libraries:
+
+```bash
+pipenv install
+```
+
+To delete existing data, run:
+
+```bash
+python manage.py flush
+```
+
+To run the application, use:
+
+```bash
+python manage.py runserver
+```
+
+To run the tests, use:
+
+```bash
+python manage.py test
+```
+
+#### Endpoints
+
+The following endpoints are available in the application to fetch weather and year-specific statistics:
+
+- `/weather`
+- `/weather/stats`
+
+#### API Documentation
+
+Swagger/OpenAPI documentation is generated using `drf-yasg`. You can access the API documentation at:
+
+- `/redoc`
+- `/swagger`
+
 ## Deployment in AWS
 
 ### AWS Tools and Services
