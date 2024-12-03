@@ -156,7 +156,7 @@ Swagger/OpenAPI documentation is generated using `drf-yasg`. You can access the 
 
 #### Data Ingestion
 
-- Use AWS Lambda for running the ingestion logic triggered by an S3 upload or scheduled via Amazon EventBridge.
+- AWS Lambda for running the ingestion logic triggered by an S3 upload or scheduled via Amazon EventBridge.
 - Alternatively, use Amazon ECS Fargate for containerized ingestion tasks.
 
 #### Storage
@@ -165,9 +165,9 @@ Swagger/OpenAPI documentation is generated using `drf-yasg`. You can access the 
 
 #### Monitoring
 
-- Use Amazon CloudWatch for application and ingestion logs.
+- we can use Amazon CloudWatch for application and ingestion logs.
 - Set up CloudWatch Alarms for error notifications via Amazon SNS.
 
 #### Deployment Pipeline
 
-- Use AWS CodePipeline and AWS CodeBuild for CI/CD to deploy the API and ingestion tasks.
+- We can use AWS CodePipeline and AWS CodeBuild for CI/CD to deploy the API and ingestion tasks.
