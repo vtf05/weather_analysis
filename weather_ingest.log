@@ -1,0 +1,10 @@
+2024-12-03 17:15:49,008 - INFO - Weather data ingestion started.
+2024-12-03 17:15:54,629 - INFO - Weather data ingestion completed. 10865 records ingested.
+2024-12-03 17:15:54,629 - INFO - Ingestion completed. Start: 2024-12-03 17:15:49.008355, End: 2024-12-03 17:15:54.629630
+2024-12-03 17:22:42,715 - INFO - Weather data ingestion started.
+2024-12-03 17:28:12,677 - INFO - Weather data ingestion started.
+2024-12-03 17:28:23,645 - ERROR - An error occurred: 'utf-8' codec can't decode byte 0xff in position 1090: invalid start byte
+2024-12-03 17:28:23,646 - INFO - Ingestion completed. Start: 2024-12-03 17:28:12.677931, End: 2024-12-03 17:28:23.646579
+2024-12-03 17:29:34,194 - INFO - Weather data ingestion started.
+2024-12-03 17:30:32,293 - INFO - Weather data ingestion completed. 113986 records ingested.
+2024-12-03 17:30:32,294 - INFO - Ingestion completed. Start: 2024-12-03 17:29:34.194325, End: 2024-12-03 17:30:32.294397
