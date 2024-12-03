@@ -9,6 +9,7 @@ class StandardResultsPagination(PageNumberPagination):
     page_size_query_param = 'page_size'
     max_page_size = 100
 
+# List views for WeatherRecord with filtering , pagination.
 class WeatherRecordListView(generics.ListAPIView):
     queryset = WeatherRecord.objects.all()
     serializer_class = WeatherRecordSerializer
@@ -16,6 +17,7 @@ class WeatherRecordListView(generics.ListAPIView):
     filterset_fields = ['date', 'station']
     pagination_class = StandardResultsPagination
 
+# List views for AnnualWeatherStats with filtering , pagination.
 class AnnualWeatherStatsListView(generics.ListAPIView):
     queryset = AnnualWeatherStats.objects.all()
     serializer_class = AnnualWeatherStatsSerializer
