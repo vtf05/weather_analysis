@@ -4,23 +4,24 @@ from rest_framework.pagination import PageNumberPagination
 from .models import WeatherRecord, AnnualWeatherStats
 from .serializers import WeatherRecordSerializer, AnnualWeatherStatsSerializer
 
+# Custom pagination class to set default and maximum page sizes
 class StandardResultsPagination(PageNumberPagination):
-    page_size = 10
-    page_size_query_param = 'page_size'
-    max_page_size = 100
+    page_size = 10  # Default number of records per page
+    page_size_query_param = 'page_size'  # Allow client to set page size using this query parameter
+    max_page_size = 100  # Maximum number of records per page
 
-# List views for WeatherRecord with filtering , pagination.
+# List view for WeatherRecord model with filtering and pagination
 class WeatherRecordListView(generics.ListAPIView):
-    queryset = WeatherRecord.objects.all()
-    serializer_class = WeatherRecordSerializer
-    filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['date', 'station']
-    pagination_class = StandardResultsPagination
+    queryset = WeatherRecord.objects.all()  # Queryset to retrieve all WeatherRecord objects
+    serializer_class = WeatherRecordSerializer  # Serializer class to convert WeatherRecord objects to JSON
+    filter_backends = [DjangoFilterBackend]  # Enable filtering using DjangoFilterBackend
+    filterset_fields = ['date', 'station']  # Allow filtering by 'date' and 'station' fields
+    pagination_class = StandardResultsPagination  # Use custom pagination class
 
-# List views for AnnualWeatherStats with filtering , pagination.
+# List view for AnnualWeatherStats model with filtering and pagination
 class AnnualWeatherStatsListView(generics.ListAPIView):
-    queryset = AnnualWeatherStats.objects.all()
-    serializer_class = AnnualWeatherStatsSerializer
-    filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['year', 'station']
-    pagination_class = StandardResultsPagination
+    queryset = AnnualWeatherStats.objects.all()  # Queryset to retrieve all AnnualWeatherStats objects
+    serializer_class = AnnualWeatherStatsSerializer  # Serializer class to convert AnnualWeatherStats objects to JSON
+    filter_backends = [DjangoFilterBackend]  # Enable filtering using DjangoFilterBackend
+    filterset_fields = ['year', 'station']  # Allow filtering by 'year' and 'station' fields
+    pagination_class = StandardResultsPagination  # Use custom pagination class
