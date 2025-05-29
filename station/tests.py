@@ -5,6 +5,24 @@ from rest_framework import status
 from .models import WeatherRecord, WeatherStation, AnnualWeatherStats
 
 class WeatherAPITestCase(TestCase):
+    # WeatherAPITestCase
+    
+    # Methods:
+    # ---------
+    # setUp():
+    #     Sets up the test client and creates test data for WeatherStation, WeatherRecord, and AnnualWeatherStats.
+
+    # test_weather_list():
+    #     Tests the weather list endpoint to ensure it returns a 200 OK status and the correct number of results.
+
+    # test_weather_stats_list():
+    #     Tests the weather stats list endpoint to ensure it returns a 200 OK status and the correct number of results.
+
+    # test_weather_list_filter():
+    #     Tests the weather list endpoint with a filter to ensure it returns a 200 OK status and the correct number of results.
+
+    # test_weather_stats_list_filter():
+    #     Tests the weather stats list endpoint with a filter to ensure it returns a 200 OK status and the correct number of results.
     """
     Test case for the Weather Analysis API endpoints.
     """
